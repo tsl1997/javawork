@@ -8,6 +8,6 @@ public class Exercise7 {
 			}
 			i++;//循环变量自增，防止死循环
 		}
-		System.out.println(sun);//输出最后结果
+		System.out.print(sun);//输出最后结果
 	}
 }
