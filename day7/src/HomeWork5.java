@@ -20,6 +20,7 @@ public class HomeWork5 {
 				min=prices[i];//永远将最小值给min
 			}
 		}
-		System.out.println("最低价格："+min);//输出结果
+		//3：输出结果
+		System.out.println("最低价格："+min);
 	}
 }
