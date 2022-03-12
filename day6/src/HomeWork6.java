@@ -14,7 +14,7 @@ public class HomeWork6 {
 		int kids ;
 		boolean isOk;
 		//2:逻辑，先循环男人，再里面循环女人，小孩=30-男人-女人
-		for (;men<=30;men++){
+		for (;men<=10;men++){
 			for (;women<=(30-men);women++){
 				kids=30-men-women;//确定小孩数量
 				isOk=3*men+2*women+kids==50;//获取布尔值，是与否
