@@ -9,12 +9,12 @@ public class Exercise5FlipFlop {
 		for (int i=1;i<=100;i++){
 			if (i%3==0){
 				if (i%5==0){
-					System.out.println("FlipFlop");
+					System.out.println("FlipFlop");//3和5都能整除，输出FlipFlop
 				}
-				System.out.println("Flip");
+				System.out.println("Flip");//3整除，5不整除，输出Flip
 			}
 			if (i%5==0){
-				System.out.println("Flop");
+				System.out.println("Flop");//5整除，输出Flop
 			}
 			System.out.println(i);
 		}
