@@ -23,6 +23,7 @@ public class HomeWork9 {
 			}
 		}
 		//输出新数据
+		System.out.println("插入后的成绩是：");
 		for (int i=0;i< num1.length;i++){
 			System.out.print(num1[i]+",");
 		}
