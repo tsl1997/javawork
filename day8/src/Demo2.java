@@ -13,6 +13,7 @@ public class Demo2 {
 		}
 
 		System.out.println("\n竖着打印春晓：");
+
 		for (int i=0;i<poetry[0].length;i++){
 			for (int j=0;j<poetry.length;j++){
 				System.out.print(poetry[j][i]);
