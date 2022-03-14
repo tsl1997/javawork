@@ -11,8 +11,8 @@ public class Demo4 {
 			}
 		}
 		System.out.println("输出结果：");
-		for (int i=0;i< height.length;i++){
-			System.out.print(height[i]+"\t");
+		for (int a:height){
+			System.out.print(a+"\t");
 		}
 	}
 }

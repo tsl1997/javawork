@@ -12,8 +12,8 @@ public class XuanZhe {
 			}
 		}
 		//输出结果
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+",");
+		for (int i:arr) {
+			System.out.print(i+",");
 		}
 	}
 }
