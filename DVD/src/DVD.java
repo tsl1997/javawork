@@ -63,8 +63,8 @@ public class DVD {
 	public static void startAdd() {
 		System.out.println("--->新增DVD");
 		System.out.println("请输入DVD名称：");
+		String name = input.next();
 		for (int i = 0; i < dvdNames.length; i++) {
-			String name = input.next();
 			if (dvdNames[i] == null) {
 				dvdNames[i] = name;
 				System.out.println("添加《" + name + "》成功！");

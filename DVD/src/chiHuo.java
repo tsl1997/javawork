@@ -15,6 +15,7 @@ public class chiHuo {
 	static String[] dingDanTimes = new String[10];//订单送餐时间
 	static double[] dingDanMoney = new double[10];//订单金额
 	static boolean[] dingDanOk = new boolean[10];//订单签收
+	static boolean[] dingDanLike = new boolean[10];//订单点赞
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -81,7 +82,7 @@ public class chiHuo {
 		}
 		//1：询问顾客意愿
 		int temp = -1;//控制循环输入合法菜品编号
-		int caiPinId = -1;//传递菜品信息
+		int caiPinId ;//传递菜品信息
 		do {
 			System.out.print("请问你需要点几号菜品？");
 			caiPinId = input.nextInt();
@@ -174,6 +175,7 @@ public class chiHuo {
 			System.out.print(dingDanTimes[i] + "\t");//输出送餐时间
 			System.out.print(dingDanMoney[i] + "\t");//输出金额
 			System.out.print(dingDanOk[i]?"已签收":"未签收" + "\t");//输出签收状态
+			System.out.print(dingDanLike[i]?"已点赞":"未点赞" + "\t");//输出点赞状态
 			System.out.println();//换行控制
 		}
 	}
@@ -186,7 +188,7 @@ public class chiHuo {
 		for (int i = 0; i < 40; i++) {
 			System.out.print("-");
 		}
-		int nums = -1;//传递订单索引数据
+		//int nums = -1;//传递订单索引数据
 		System.out.println("\n编号\t菜品\t\t\t份数\t姓名\t联系方式\t送餐地址\t送餐时间\t订单金额\t签收状态\t是否点赞");
 		for (int i = 0; i < dingDanId.length; i++) {
 			if (dingDanId[i] == 0) {
@@ -201,11 +203,12 @@ public class chiHuo {
 			System.out.print(dingDanTimes[i] + "\t");//输出送餐时间
 			System.out.print(dingDanMoney[i] + "\t");//输出金额
 			System.out.print(dingDanOk[i]?"已签收":"未签收" + "\t");//输出签收状态
+			System.out.print(dingDanLike[i]?"已点赞":"未点赞" + "\t");//输出点赞状态
 			System.out.println();//换行控制
-			nums++;
+			//nums++;
 		}
 		//删除提示
-		int num=-1;
+		int num;
 		do {
 			System.out.print("请输入你需要删除的订单编号：");
 			num = input.nextInt();
@@ -216,7 +219,7 @@ public class chiHuo {
 			}
 		}while (true);
 
-		if (dingDanOk[num-1]==false){
+		if (!dingDanOk[num-1]){
 			System.out.println("该订单未签收，请先签收后再来删除！");
 		}else {
 			for (int i=num-1;i<dingDanId.length-1;i++){
@@ -228,6 +231,7 @@ public class chiHuo {
 				dingDanTimes[i] = dingDanTimes[i+1];//订单送餐时间
 				dingDanMoney[i] = dingDanMoney[i+1];//订单金额
 				dingDanOk[i] = dingDanOk[i+1];//订单签收
+				dingDanLike[i] =dingDanLike[i+1];//订单点赞
 			}
 			//重置末尾订单重复的问题
 			dingDanId[dingDanId.length-1] = 0;//订单编号
@@ -238,6 +242,7 @@ public class chiHuo {
 			dingDanTimes[dingDanId.length-1] = "";//订单送餐时间
 			dingDanMoney[dingDanId.length-1] = 0.0;//订单金额
 			dingDanOk[dingDanId.length-1] = false;//订单签收
+			dingDanLike[dingDanId.length-1]=false;//订单点赞
 			System.out.println("删除成功！");
 		}
 
@@ -270,7 +275,7 @@ public class chiHuo {
 			System.out.println();//换行控制
 		}
 		//
-		int isOKOne=-1;
+		int isOKOne;
 		do {
 			System.out.println("请输入你要签收的订单编号：");
 			isOKOne = input.nextInt();
@@ -281,7 +286,7 @@ public class chiHuo {
 			}
 		}while (true);
 
-		if (dingDanOk[isOKOne-1]==false){
+		if (!dingDanOk[isOKOne-1]){
 			dingDanOk[isOKOne-1]=true;
 			System.out.println("订单签收成功");
 		}else{
@@ -305,6 +310,7 @@ public class chiHuo {
 			System.out.println("不能评价系统里面没有的菜品哦！");
 			menu();
 		}
+
 		caiPinLike[good-1]++;//点赞操作
 		System.out.println(caiPinName[good-1]+"点赞成功！！！刷新后数据如下：");
 		System.out.println("\n名称\t\t\t价格\t\t\t点赞数");
