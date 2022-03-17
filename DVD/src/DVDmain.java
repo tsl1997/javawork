@@ -63,15 +63,15 @@ public class DVDmain {
 		//查看DVD货架是否已经装满，如果装满就跳转到主菜单。
 		if (dvdName[dvdName.length-1]!=null){
 			System.out.println("DVD货架已经装满，请先删除后再进行新增操作！");
-			menu();//回主菜单
-		}
-		System.out.println("请输入DVD名称：");
-		String name = input.next();//临时存储变量
-		for (int i=0;i< dvdName.length;i++){
-			if (dvdName[i]==null){
-				dvdName[i]=name;//将新增的DVD名称存储到数组
-				System.out.println("添加《"+name+"》成功！");
-				break;
+		}else {
+			System.out.println("请输入DVD名称：");
+			String name = input.next();//临时存储变量
+			for (int i = 0; i < dvdName.length; i++) {
+				if (dvdName[i] == null) {
+					dvdName[i] = name;//将新增的DVD名称存储到数组
+					System.out.println("添加《" + name + "》成功！");
+					break;
+				}
 			}
 		}
 	}
