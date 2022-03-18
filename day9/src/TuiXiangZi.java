@@ -12,6 +12,8 @@ public class TuiXiangZi {
 	//3：小人参数，设置小人所在位置的横纵坐标参数
 	static int gameRow=1;//小人横坐标
 	static int gameList=1;//小人纵坐标
+	static int xiangRow=5;//箱子横坐标
+	static int xiangList=5;//箱子纵坐标
 
 
 	public static void main(String[] args) {
@@ -26,6 +28,7 @@ public class TuiXiangZi {
 		//4:设置小人出现的位置(固定或者随机)，设置小人所在位置的横纵坐标参数
 
 		menu[gameRow][gameList]=8;//设置小人
+		//menu[xiangRow][xiangList]=4;//设置箱子
 		game();
 		do {
 			System.out.println("请选择小人移动的方向(1上，2下，3左，4右，5退出游戏）：");
