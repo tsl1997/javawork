@@ -1,5 +1,5 @@
 /**
- * 雷和对象，作业第一题，创建school类
+ * 类和对象，作业第一题，创建school类
  * */
 public class School {
 	/**
