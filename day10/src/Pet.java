@@ -13,7 +13,7 @@ public class Pet {
 	/**
 	 * 性别 sex
 	 */
-	public char sex;
+	public String sex;
 	/**
 	 * 品种 string
 	 */
@@ -23,7 +23,7 @@ public class Pet {
 	 */
 	public int price;
 
-	public Pet(String nikeName, String color, char sex, String brand, int price) {
+	public Pet(String nikeName, String color, String sex, String brand, int price) {
 		this.nikeName = nikeName;
 		this.color = color;
 		this.sex = sex;
