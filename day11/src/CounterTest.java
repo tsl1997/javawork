@@ -7,7 +7,7 @@ public class CounterTest {
 		System.out.println("和是："+sum);
 
 		int[] nums={12,23,34,43,45,67};//创建数组
-		int sum2=new Counter().adds(nums);//传入数组参数
+		int sum2=new Counter().add(nums);//传入数组参数
 		System.out.println("多个整数求和是："+sum2);
 	}
 }
