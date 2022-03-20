@@ -5,6 +5,8 @@ public class CalculatorTest {
 		double c;
 		c=new Calculator().add(5,10);//调用加法
 		System.out.println(c);
+		c=new Calculator().add(5,10.98);//调用加法
+		System.out.println(c);
 		c=new Calculator().minus(5,10);//调用减法
 		System.out.println(c);
 		c=new Calculator().multiple(5,10);//调用乘法

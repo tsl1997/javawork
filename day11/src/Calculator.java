@@ -8,6 +8,15 @@ public class Calculator {
 		int c=a+b;
 		return c;
 	}
+	/**加法浮点数 c是返回的int结果
+	 * @param a 第一个元素
+	 * @param b 第二个元素
+	 * */
+	public double add(double a,double b){
+		double c=a+b;
+		return c;
+	}
+
 	/**减法 c是返回的int结果
 	 * @param a 第一个减数
 	 * @param b 第二个被减数
