@@ -2,13 +2,20 @@ package show.helloworld;
 /**这个一个员工类*/
 public class Employee {
 	/**姓名*/
-	String name;
+	public String name;
 	/**岗位*/
-	String post;
+	public String post;
 	/**薪水*/
-	int salary;
+	public int salary;
 	/**邮箱*/
-	String email;
+	public String email;
+	/**构造方法*/
+	public Employee(String name, String post, int salary, String email) {
+		this.name = name;
+		this.post = post;
+		this.salary = salary;
+		this.email = email;
+	}
 	/**自我介绍*/
 	public String showInfo(){
 		String str ="姓名："+name+",岗位"+post+",新水："+salary+",邮箱："+email;
