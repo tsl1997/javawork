@@ -8,6 +8,7 @@ public class DogTest {
 		Dog pet = new Dog();//创建对象
 		System.out.print("请输入你要领养的宠物名字：");
 		pet.name = input.next();//获取姓名并赋值
+
 		System.out.print("请选择你要领养的宠物类型(1：狗狗 2：:企鹅)：");
 		pet.getTypes(input.nextInt());//获取用户输入的值，并调用方法
 		String type = pet.setTypes();//获取宠物的类型
