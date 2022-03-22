@@ -2,6 +2,7 @@ package show.helloworld.test;
 import org.junit.Test;
 import show.helloworld.Employee;
 import show.helloworld.Person;
+import show.helloworld.Student;
 
 public class Tester {
 	@Test
@@ -14,13 +15,19 @@ public class Tester {
 
 	@Test
 	public void person(){
-		Person p1 = new Person();
-		System.out.println(p1.showInfo());
-		Person p2 = new Person("明日酱",12);
+		/*Person p1 = new Person();
+		System.out.println(p1.showInfo());*/
+		Person p2 = new Person("明日酱",102);
 		System.out.println(p2.showInfo());
 		Person p3 = new Person("江户川柯南",10,"小男孩");
 		System.out.println(p3.showInfo());
 
+	}
+
+	@Test
+	public  void  student(){
+		Student student = new Student("泽塔奥特曼",10);//插入信息
+		System.out.println(student.showInfo());//输出自我介绍
 	}
 
 }
