@@ -16,6 +16,16 @@ public class Employee {
 		this.salary = salary;
 		this.email = email;
 	}
+
+	public Employee(String name, int salary) {
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public Employee(){
+
+	}
+
 	/**自我介绍*/
 	public String showInfo(){
 		String str ="姓名："+name+",岗位"+post+",新水："+salary+",邮箱："+email;
