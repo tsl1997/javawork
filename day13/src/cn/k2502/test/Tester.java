@@ -15,4 +15,8 @@ public class Tester {
 		System.out.println(cat.showInfo());
 
 	}
+	@Test
+	public void TestPet(){
+
+	}
 }

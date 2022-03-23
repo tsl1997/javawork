@@ -1,10 +1,10 @@
 package cn.k2502.pet;
 /**这是一个宠物类*/
 public class Pet {
-	private String name;//昵称
-	private int age;//年龄
-	private int weight;//体重
-	private String variety;//品种
+	public String name;//昵称
+	public int age;//年龄
+	public int weight;//体重
+	public String variety;//品种
 	public String getName() {
 		return name;
 	}
