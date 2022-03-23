@@ -5,6 +5,7 @@ public class Pet {
 	public int age;//年龄
 	public int weight;//体重
 	public String variety;//品种
+	public String color;//颜色
 	public String getName() {
 		return name;
 	}
@@ -45,30 +46,27 @@ public class Pet {
 		this.variety = variety;
 	}
 
-	/*public String getColor() {
+	public String getColor() {
 		return color;
 	}
 
 	public void setColor(String color) {
 		this.color = color;
-	}*/
+	}
 	/**全参*/
-	public Pet(String name, int age, int weight, String variety, String color) {
+	public Pet(String name, int age, int weight, String variety,String color) {
 		setName(name);
 		setAge(age);
 		setWeight(weight);
 		setVariety(variety);
-		//setColor(color);
+		setColor(color);
 	}
 	/**无参*/
 	public Pet() {
 	}
 
-//	public void hi(){
-//		System.out.println("八戒八戒");
-//	}
 	/**打印信息*/
 	public String showInfo(){
-		return getName()+getAge()+getWeight()+getVariety();//+getColor();
+		return getName()+","+getAge()+","+getWeight()+","+getVariety()+","+getColor();
 	}
 }
