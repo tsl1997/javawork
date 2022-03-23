@@ -14,6 +14,7 @@ public class GirlFriend extends Human{
 	/**构造函数*/
 	public GirlFriend(String name, double height,String face) {
 		super(name, height);
+		setFace(face);
 	}
 	/**洗衣服：自我介绍
 	 * 传入衣服品牌和颜色*/
