@@ -49,4 +49,11 @@ public class Student extends Human{
 		return getName()+"语文："+getChinese()+"\t数学："+getMath()+"\t英语："
 				+getEnglish()+"\t总分:"+sum;
 	}
+
+	public Student(String name,int chinese, int math, int english) {
+		super(name);
+		this.chinese = chinese;
+		this.math = math;
+		this.english = english;
+	}
 }

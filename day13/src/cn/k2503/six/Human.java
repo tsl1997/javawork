@@ -23,4 +23,8 @@ public class Human {
 		}
 		this.age = age;
 	}
+	/**带参构造*/
+	public Human(String name) {
+		this.name = name;
+	}
 }
