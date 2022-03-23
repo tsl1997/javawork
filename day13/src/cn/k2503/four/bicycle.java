@@ -30,4 +30,9 @@ public class bicycle {
 	public String run() {
 		return "蹬着跑";
 	}
+
+	public bicycle(int number, String color) {
+		this.number = number;
+		this.color = color;
+	}
 }
