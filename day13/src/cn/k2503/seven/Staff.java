@@ -39,7 +39,17 @@ public class Staff {
 		this.salary = salary;
 	}
 	/**啥事不干*/
-	public void work(){
+	public String work(){
+		return "";
+	}
 
+	public Staff(String name, int number, int salary) {
+		setName(name);
+		setNumber(number);
+		setSalary(salary);
+	}
+
+	public String showInfo() {
+		return getName()+"\t工号："+getNumber();
 	}
 }
