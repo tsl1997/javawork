@@ -6,6 +6,7 @@ import show.helloworld.Person;
 import show.helloworld.Student;
 
 public class Tester {
+	String s;
 	@Test
 	public void employee(){
 		Employee e1 = new Employee("李佛摩尔","交易员",100000000,"l@a.com");
@@ -61,5 +62,7 @@ public class Tester {
 			System.out.println(book.showInfo());//循环输出内容
 		}
 	}
+	
+
 
 }
