@@ -28,4 +28,5 @@ public class Human {
 		setName(name);
 		setHeight(height);
 	}
+	
 }

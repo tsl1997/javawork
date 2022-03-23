@@ -20,4 +20,9 @@ public class Clothes {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+	public Clothes(String brand, String color) {
+		this.brand = brand;
+		this.color = color;
+	}
 }
