@@ -41,6 +41,6 @@ public class Pet {
 
 	public String showInfo(){
 		return "宠物的自白：\n我的名字叫："+getNickName()+"，我的健康值是："+getHp()
-				+"我和主人的亲密度是："+getLove();
+				+"，我和主人的亲密度是："+getLove();
 	}
 }
