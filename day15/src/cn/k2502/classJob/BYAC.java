@@ -8,6 +8,11 @@ public class BYAC extends YuanGong{
 
 	@Override
 	public String work() {
-		return getPost()+"程序员"+getName()+"在写代码";
+		return getPost()+getName()+"在写代码";
+	}
+
+	@Override
+	public String toString() {
+		return getName()+","+getPost();
 	}
 }

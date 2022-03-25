@@ -7,6 +7,6 @@ public class Teacher extends YuanGong{
 
 	@Override
 	public String work() {
-		return getPost()+"教员"+getName()+"在备课";
+		return getPost()+getName()+"在备课";
 	}
 }
