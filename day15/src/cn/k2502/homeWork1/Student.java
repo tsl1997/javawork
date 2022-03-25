@@ -35,9 +35,6 @@ public class Student {
 	/**重写自我介绍*/
 	@Override
 	public String toString() {
-		return "Student{" +
-				"name='" + name + '\'' +
-				", score=" + score +
-				'}';
+		return name  + "的成绩是" + score;
 	}
 }
