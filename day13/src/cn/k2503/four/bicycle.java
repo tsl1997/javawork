@@ -28,7 +28,7 @@ public class bicycle {
 
 	/**跑*/
 	public String run() {
-		return "蹬着跑";
+		return "蹬着"+getNumber()+"只轮子的"+getColor()+"的车";
 	}
 
 	public bicycle(int number, String color) {

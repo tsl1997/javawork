@@ -16,7 +16,7 @@ public class tsla extends bicycle{
 		if(battery) {
 			return "骑着"+getNumber()+"只轮子的"+getColor()+"的车";
 		}else{
-			return "蹬着"+getNumber()+"只轮子的"+getColor()+"的车";
+			return super.run();
 		}
 	}
 
