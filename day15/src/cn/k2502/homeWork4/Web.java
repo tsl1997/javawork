@@ -1,6 +1,12 @@
 package cn.k2502.homeWork4;
 
 public class Web extends Maintain{
+	public Web() {
+	}
+
+	public Web(String name, int number) {
+		super(name, number);
+	}
 
 	@Override
 	public String work() {
