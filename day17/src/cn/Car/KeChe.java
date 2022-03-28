@@ -33,6 +33,11 @@ public class KeChe extends Che{
 		this.seatNum = seatNum;
 	}
 
+	public KeChe(String brand,int seatNum) {
+		setBrand(brand);
+		this.seatNum = seatNum;
+	}
+
 	@Override
 	public String toString() {
 		return "KeChe{" +super.toString()+
@@ -40,4 +45,21 @@ public class KeChe extends Che{
 				'}';
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof KeChe)) return false;
+
+		KeChe keChe = (KeChe) o;
+		if (this.getBrand()!=null && !this.getBrand().equals(keChe.getBrand()))return false;
+
+		return seatNum == keChe.seatNum;
+	}
+
+	@Override
+	public int hashCode() {
+		int result= getBrand()!=null? getBrand().hashCode() : 0;
+		result=31*result+getSeatNum()!=0?getSeatNum():0;
+		return result;
+	}
 }
