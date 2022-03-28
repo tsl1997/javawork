@@ -77,17 +77,17 @@ public class CheManagement2 {
 				break;
 			}
 		}while(cheX[cheX.length-1]==null);//当最后一辆车存在时停止循环
-		double sunMoney=0;//定义租金求和
+		double sumMoney=0;//定义租金求和
 		System.out.println("当前购物车：\n车牌\t\t\t租赁天数\t租赁费用\t\t打折情况");
 		for (int i = 0; i < cheX.length; i++){
 			if (cheX[i]==null){
 				break;//当没有车后停止循环
 			}
-			sunMoney+=cheX[i].giveMoney();//租金求和
+			sumMoney+=cheX[i].giveMoney();//租金求和
 			System.out.println(cheX[i].getCarNo()+"\t"+cheX[i].getDays()+"天"+
 					"\t"+cheX[i].giveMoney()+"元"+ "\t"+cheX[i].getDiscount());
 			//打印车牌信息，最后输出
 		}
-		System.out.println("你需要支付的租赁费用一共是："+sunMoney+"元");//租金求和费用输出
+		System.out.println("你需要支付的租赁费用一共是："+sumMoney+"元");//租金求和费用输出
 	}
 }
