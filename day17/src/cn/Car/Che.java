@@ -81,6 +81,10 @@ public abstract class Che {
 				", discount=" + discount +
 				'}';
 	}
+	/**计算租金*/
+	public double giveMoney() {
+		return getMoney()*getDays()*getDiscount();
+	}
 
 
 }
