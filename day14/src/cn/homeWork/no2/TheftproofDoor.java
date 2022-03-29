@@ -1,6 +1,6 @@
 package cn.homeWork.no2;
 
-public class TheftproofDoor extends Door implements Lock{
+public class TheftproofDoor extends Door implements Lock,doorBell{
 	@Override
 	public void openDoor() {
 		System.out.println("用力推，门打开了。");
@@ -19,5 +19,10 @@ public class TheftproofDoor extends Door implements Lock{
 	@Override
 	public void closeLock() {
 		System.out.println("插进钥匙，向左旋转钥匙三圈，锁上了，拔出钥匙。");
+	}
+
+	@Override
+	public void photograph() {
+		System.out.println("铃铛.......叮叮叮.....照片已经存储");
 	}
 }
