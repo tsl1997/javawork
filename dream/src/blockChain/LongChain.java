@@ -27,7 +27,8 @@ public class LongChain {
 				System.out.println("项目没有初始化，请初始化后再尝试！");
 				break;//如果没有初始化，就停止运行
 			}
-			if (blocks[blocks.length-1]!=null){//如果最后一个区块已经有数据的话
+			if (blocks[blocks.length-2]!=null){
+				//如果最后第2个区块已经有数据的话，原因是查询的时候需要索引+1，避免越界问题
 				System.out.println("最长链已经使用完，请先增加最长链！");
 				break;
 			}

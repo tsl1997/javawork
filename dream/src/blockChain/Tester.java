@@ -1,8 +1,5 @@
 package blockChain;
 
-import org.junit.Test;
-
-import java.util.Date;
 import java.util.Scanner;
 
 /**这是一个测试类*/
@@ -27,14 +24,18 @@ public class Tester {
 		LongChain l = new LongChain();//创建最长链操作对象
 		Block[] blocks = l.blocks(5);//创建最长链
 		blocks = l.dateBlocks(blocks);//初始化，创世区块
-		int num=0;
+
 		do {
 			System.out.println("请输入你要写入的内容：");
 			String demo = sc.next();//用户输入的内容
 			blocks = l.addBlocks(blocks, demo);//增加区块内容
 			l.findBlocks(blocks);//查看最新的区块信息
-			num++;//控制流程
-		}while(num<3);
+			System.out.print("是否继续添加新的区块内容(y继续)？");
+			String temp = sc.next();
+			if (!temp.equalsIgnoreCase("y")){
+				break;//当输入不是y时，退出输入
+			}
+		}while(true);
 		System.out.println("是否输出所有的区块信息？(y查看，其他取消）");
 		String isOK = sc.next();//判断用户是否查看
 		if (isOK.equalsIgnoreCase("y")){
