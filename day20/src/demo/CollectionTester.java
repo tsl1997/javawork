@@ -145,6 +145,9 @@ public class CollectionTester {
 	@Test //set接口
 	public void test(){
 		HashSet<String> hs = new HashSet<>();
+		hs.add("逢魔时王");
+		hs.add("异魔神");
+		hs.add("小明");
 
 
 
