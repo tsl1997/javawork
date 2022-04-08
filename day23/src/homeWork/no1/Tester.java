@@ -21,6 +21,5 @@ public class Tester {
 		for(News e : set) {
 			System.out.println(e.getName());
 		}
-
 	}
 }
