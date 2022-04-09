@@ -17,7 +17,15 @@ public class Tester {
 		System.out.println("CN对应的国家是："+map.get("CN"));
 		System.out.println("Map中共有"+map.size()+"组数据");
 		System.out.println("Map中含有JP的key吗？"+map.containsKey("JP"));
-		Set<Map.Entry<String, String>> e = map.entrySet();
+		//3：打印输出
+		System.out.println(map.keySet());//获取键集
+		System.out.println(map.values());//获取值集
+		System.out.println(map.entrySet());//获取键值对
+		System.out.println(map);//打印hashmap集合
+		map.clear();
+		System.out.println("已清空Map中数据！");
+
+		/*Set<Map.Entry<String, String>> e = map.entrySet();
 		Iterator<Map.Entry<String, String>> it = e.iterator();
 		StringBuilder key = new StringBuilder();
 		StringBuilder value = new StringBuilder();
@@ -32,7 +40,7 @@ public class Tester {
 		System.out.println(map);
 		map.clear();
 		System.out.println("已清空Map中数据！");
-
+*/
 
 	}
 }
