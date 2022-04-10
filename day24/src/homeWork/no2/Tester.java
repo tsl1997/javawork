@@ -13,9 +13,9 @@ public class Tester {
 		//3:打印学生成绩
 		//toScore(map);
 		//4:打印学生成绩最值
-		toScoreMAX(map);
+		//toScoreMAX(map);
 		//5:学生成绩降序
-		//toScoreNo(map);
+		toScoreNo(map);
 	}
 
 	/**程序初始化数据*/
