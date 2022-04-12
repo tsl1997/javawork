@@ -19,11 +19,12 @@ public class Tester {
 		s = s.replace("{name}", "小白");//替换字符串
 		s = s.replace("{type}","中华田园犬");
 		s = s.replace("{master}","黑曼巴");
-		System.out.println(s);
+		System.out.println(s);//这一步已经运算完成了
+		br.close();//关闭资源，控制一下流程
 		FileWriter fw = new FileWriter("src\\homeWork\\no4\\4.txt");
+		//先取出，再运算，后创建写入对象
 		BufferedWriter bw = new BufferedWriter(fw);
 		bw.write(s);//写入文件中
 		bw.close();
-		br.close();//关闭资源
 	}
 }
