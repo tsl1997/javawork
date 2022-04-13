@@ -14,8 +14,8 @@ public class Tester {
 	public void test() throws Exception {
 		//先去复习一下file类的基本操作
 		//1：首先给定一个文件夹的目录、遍历文件目录
-		File file = new File("src\\homeWork\\no8\\test");//复制前的文件路径
-		File cvFile = new File("src\\homeWork\\no8\\cv");//复制后的文件路径
+		File file = new File("C:\\Users\\huaxi\\Desktop\\29.mkv");//复制前的文件路径
+		File cvFile = new File("C:\\Users\\huaxi\\Videos");//复制后的文件路径
 		findFile(file,cvFile);//我增加了文件的层级和类别
 	}
 
@@ -35,7 +35,7 @@ public class Tester {
 			//先读取文件
 			FileInputStream fi = new FileInputStream(aPath);//基础字节流输入
 			FileOutputStream fo = new FileOutputStream(path);//基础字节流输出
-			byte[] bs = new byte[1024];
+			byte[] bs = new byte[1024*1024*128];//一次性开辟的内存空间
 			int len;
 			while((len = fi.read(bs))!=-1){
 				fo.write(bs,0,len);//将读取的内容写入的文件中去
