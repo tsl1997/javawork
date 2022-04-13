@@ -30,20 +30,16 @@ public class Tester3 {
 		}
 		oo.close();//导入了接口，应该就可以序列化了
 	}
+
 	@Test //批量读取文件里面的对象内容
 	public void test1()throws Exception{
 		FileInputStream fi = new FileInputStream("src\\homeWork\\no6\\info2.txt");
 		ObjectInputStream oi = new ObjectInputStream(fi);
 		Object o;
-		try {
-			while((o = oi.readObject())!=null) {//读取文件的对象内容
-				//Person o1 = (Person) o;//向下转型,这不是必须的，Object是一切对象的父类，
-				// 当你重写了toString方法后，父类可以直接调用，避免了向下转型会遇到的异常
-				System.out.println(o);//多个对象最后也出问题了，我想想看
+		while(fi.available()>0) {//如果读取到文件的末尾就停止读取，用基础流来实现
+			o = oi.readObject();//读取对象
+			System.out.println(o);//打印对象信息
 			}
-		} catch (Exception e) {
-			//e.printStackTrace();//假装自己会了，自欺欺人，明天问老师去，下了下了
-		}
 		oi.close();//关闭资源
 	}
 }
