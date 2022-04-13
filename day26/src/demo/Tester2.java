@@ -2,14 +2,15 @@ package demo;
 
 public class Tester2 {
 	public static void main(String[] args) {
-		Tester1 t = new Tester1();
-		//t.run();
+		Test te = new Test();//创建任务对象
+		Thread t = new Thread(te,"南小鸟");//创建Thread对象，参入任务参数
+		Thread jk = new Thread(te,"艾米莉亚");//创建对象
+		t.setPriority(8);//设置优先级
+		jk.setPriority(3);
+		jk.start();//开启线程
 		t.start();
-		Tester1 jk = new Tester1();
-		jk.start();
-
 		for (int i = 0; i < 10; i++) {
-			System.out.println("主要："+i);
+			System.out.println("白："+i);//主线程内容
 		}
 	}
 }
