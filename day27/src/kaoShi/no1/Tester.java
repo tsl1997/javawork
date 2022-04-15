@@ -6,8 +6,7 @@ public class Tester {
 	public static int function(int x){
 		if(x==0){
 			return x;
-		}
-		if(x>0){
+		}else if(x>0){
 			return x+3;
 		}
 		return x*x-1;
