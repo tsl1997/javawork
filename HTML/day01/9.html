@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>练习2QQ注册</title>
+		<!--这只是来练习熟练度-->
+	</head>
+
+	<body>
+		<img src="img/qq.png" />
+		<p></p>
+		<form action="#" method="post">
+			<table cellpadding="10px">
+				<tr>
+					<td align="right" width="200px">邮箱账号</td>
+					<td>
+						<input name="email" type="text" required />
+						<select>
+							<option value="qqmail">@qq.com</option>
+							<option value="163mail">@163.com</option>
+							<option value="gmail">@gmail.com</option>
+							</section>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">昵称</td>
+					<td>
+						<input name="nikename" type="text" required />
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">密码</td>
+					<td>
+						<input name="password" type="password" required />
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">确认密码</td>
+					<td>
+						<input name="topassword" type="password" required />
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">性别</td>
+					<td>
+						<input name="sex" value="boy" type="radio" checked />男
+						<input name="sex" value="girl" type="radio" />女
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">生日</td>
+					<td>
+						<table>
+							<tr>
+								<td>
+									<select>
+										<option value="meta">公历</option>
+										<option value="chinameta">农历</option>
+									</section>
+								</td>
+								<td>
+									<select>
+										<option value="year">1990年</option>
+										<option value="y1991">1991年</option>
+									</section>
+								</td>
+								<td>
+									<select>
+										<option value="moth">1月</option>
+										<option value="m1">1月</option>
+										<option value="m2">2月</option>
+										<option value="m3">3月</option>
+										<option value="m4">4月</option>
+										<option value="m5">5月</option>
+										<option value="m6">6月</option>
+										<option value="m7">7月</option>
+										<option value="m8">8月</option>
+										<option value="m9">9月</option>
+										<option value="m10">10月</option>
+										<option value="m11">11月</option>
+										<option value="m12">12月</option>
+									</section>
+								</td>
+								<td>
+									<select>
+										<option value="day">1日</option>
+										<option value="d2">2日</option>
+									</section>
+										<!--明天再去处理这个，先跳过-->
+								</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">所在地</td>
+					<td>
+						<table>
+							<tr>
+								<td>
+									<select name="guojia" id="1">
+										<option value="cn">中国</option>
+										<option value="jp">小日本</option>
+										</section>
+								</td>
+								<td>
+									<select name="sheng" id="2">
+										<option value="hubei">湖北</option>
+										<option value="beijin">北京</option>
+										</section>
+								</td>
+								<td>
+									<select name="city" id="3">
+										<option value="wuhan">武汉</option>
+										<option value="shenz">深圳</option>
+										</section>
+								</td>
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td align="right" width="200px">验证码</td>
+					<td>
+						<input name="random" type="text" required />
+						<img src="img/verycode.gif" />
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input name="ok" type="checkbox" />我已经阅读服务条款
+						<p></p>
+						<button type="submit" ><img src="img/renren.gif" /></button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

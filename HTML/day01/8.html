@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>练习2淘宝网注册</title>
+	</head>
+
+	<body>
+		<img src="img/taobaoreg.PNG" />
+		<p></p>
+		<form action="#" method="post">
+			<table border="1px" cellspacing="0px" cellpadding="4px" align="center">
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">名字：</td>
+					<td width="600px"><input name="name" type="text" required/></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">姓氏：</td>
+					<td width="600px"><input name="firstname" type="text" required/></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">登录名：</td>
+					<td width="600px"><input name="username" type="text" required/> (可包含 a~z、0~9 和下划线)
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">密码：</td>
+					<td width="600px"><input name="password" type="password" required/> (至少包含6个字符)
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">再次输入密码：</td>
+					<td width="600px"><input name="topassword" type="password" required/></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">电子邮箱：</td>
+					<td width="600px"><input name="email" type="text" required/></td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">性别：</td>
+					<td>
+						<input name="sex" value="boy" type="radio" />
+						<img src="img/Male.gif" />男
+						<input name="sex" value="girl" type="radio" />
+						<img src="img/Female.gif" />女
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">爱好：</td>
+					<td>
+						<input name="c1" type="checkbox" />运动
+						<input name="c2" type="checkbox" />聊天
+						<input name="c3" type="checkbox" />玩游戏
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">出生日期：</td>
+					<td>
+						<input name="year" type="text" placeholder="yyyy" required/>年
+						<select>
+							<option value="month">选择月份</option>
+							<option value="m1">1月</option>
+							<option value="m2">2月</option>
+							<option value="m3">3月</option>
+							<option value="m4">4月</option>
+							<option value="m5">5月</option>
+							<option value="m6">6月</option>
+							<option value="m7">7月</option>
+							<option value="m8">8月</option>
+							<option value="m9">9月</option>
+							<option value="m10">10月</option>
+							<option value="m11">11月</option>
+							<option value="m12">12月</option>
+						</select>
+						<input name="day" type="text" placeholder="dd" required/>日
+					</td>
+				</tr>
+				<tr>
+					<td align="right" bgcolor="lightblue" width="300px">
+						<input type="reset" value="重填：">
+					</td>
+					<td>
+						<button type="submit" >同意以下服务条款，提交注册信息</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" >
+						<h3>阅读淘宝网服务协议</h3>
+						<textarea name="description" cols="100" rows="6">
+欢迎阅读服务条款协议，本协议阐述之条款和条件适用于您使用Taobao.com网站的各种工具和服务。
+本服务协议双方为淘宝与淘宝网用户，本服务协议具有合同效力。
+淘宝的权利和义务:
+1.淘宝有义务在现有技术上维护整个网上交易平台的正常运行，并努力提升和改进技术，使用户网上交易活动的顺利。
+						</textarea>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+
+</html>

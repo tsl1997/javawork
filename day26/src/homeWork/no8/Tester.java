@@ -14,7 +14,7 @@ public class Tester {
 	public void test() throws Exception {
 		//先去复习一下file类的基本操作
 		//1：首先给定一个文件夹的目录、遍历文件目录
-		File file = new File("C:\\Users\\huaxi\\Desktop\\29.mkv");//复制前的文件路径
+		File file = new File("C:\\Users\\huaxi\\Desktop\\上课内容\\其他");//复制前的文件路径
 		File cvFile = new File("C:\\Users\\huaxi\\Videos");//复制后的文件路径
 		findFile(file,cvFile);//我增加了文件的层级和类别
 	}
