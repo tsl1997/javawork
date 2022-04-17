@@ -1,0 +1,40 @@
+h3{
+	color: white;
+	font-size: 30px;
+	background-color: green;
+	width:200px ;
+	height: 40px;
+	border-radius: 15px;
+	text-align: center;
+}
+p{
+	color: orange;
+	height: 40px;
+}
+#s1{
+	color: red;
+	background-color: bisque;
+	font-size: 20px;
+	font-family: "宋体";
+}
+#s2{
+	color: yellow;
+	background-color: pink;
+	font-size: 20px;
+	font-family: "微软雅黑";
+}
+#s3{
+	color: white;
+	background-color: black;
+	font-size: 20px;
+	font-family: "楷体";
+}
+#s4{
+	color: greenyellow;
+	background-color: blueviolet;
+	font-size: 20px;
+	font-family: "仿宋";
+}
+body{
+	background-color: lightgoldenrodyellow;
+}

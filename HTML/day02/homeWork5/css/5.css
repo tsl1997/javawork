@@ -1,0 +1,29 @@
+/*别问，问就是从百度首页拔过来的*/
+div:nth-of-type(1){
+	position: absolute;
+	right: 0;
+	padding-right: 24px;
+}
+div:nth-of-type(2){
+	text-align: center;
+	margin: 0;
+	padding: 30px;
+}
+div:nth-of-type(3){
+	margin: 0;
+	text-align: center;
+	font-size: 22px;
+}
+.tong{
+	margin: 0;
+	text-align: center;
+	height: 50px;
+}
+#soso{
+	width: 500px;
+	height: 40px;
+}
+#baidu{
+	height: 40px;
+	width: 100px;
+}
