@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+    	//菱形
+		//1:9行，上下对称，故-4到+4
+		var num;
+		do {
+			num=prompt("请输入需要打印的菱形行数(奇数）：");
+			if (num%2!=0){
+				break;//当输入数据合法时跳出循环
+			}
+			alert("输入数据不合法！");
+		}while (true);
+
+		for (let i=-(num/2-(num/2%1));i<=(num/2-(num/2%1));i++){
+			//2:打印空格
+			for (let j=1;j<=Math.abs(i);j++){
+				document.write("&nbsp;");
+			}
+			//3:打印星星
+			for (let k=1;k<=num-Math.abs(i)*2;k++){
+				document.write("*");
+			}
+			document.write("<br/>");
+		}
+    </script>
+</head>
+<body>
+</body>
+</html>

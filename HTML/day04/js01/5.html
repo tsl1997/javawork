@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>获取卡号</title>
+	</head>
+	<script type="text/javascript">
+		var icard = prompt("请输入一个四位数", 1234);
+		//判断合法范围
+		if(icard > 9999) {
+			alert("输入的数字太大了");
+		} else if(icard < 1000) {
+			alert("输入的数字太小了");
+		}
+		//去掉非法的小数部分
+		icard=icard-icard%1;
+		//获取千位
+		var qian = (icard / 1000) - icard / 1000 % 1;
+		//获取百位
+		var bai = (icard / 100 % 10) - icard / 100 % 10 % 1;
+		//获取十位
+		var shi = (icard % 100 / 10) - icard % 100 / 10 % 1;
+		//获取个位
+		var ge = icard % 10;
+		var str = `千位:${qian}
+百位:${bai}
+十位:${shi}
+个位:${ge}`;
+		alert(str);
+	</script>
+
+	<body>
+	</body>
+
+</html>
