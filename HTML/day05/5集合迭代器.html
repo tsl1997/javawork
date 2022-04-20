@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*  let arr=[1,2,3,4];
+      arr[50]=99;
+      for(let num in arr) {
+        document.write(arr[num]+"&nbsp;");
+      }*/
+    //  迭代器迭代的时候，不会剔除undefined
+    //  for-in在判断的时候会剔除掉undefined
+    let iSet = new Set();
+    iSet.add(1);
+    iSet.add(2);
+    iSet.add(3);
+    for (let num of iSet) {
+        document.write(num + "<br/>");
+    }
+
+</script>
+</html>

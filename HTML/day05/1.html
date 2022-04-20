@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水仙花</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    for(let i=100;i<1000;i++){
+        let bai=parseInt(i/100);
+        let shi=parseInt(i/10%10);
+        let ge=parseInt(i%10);
+        let sum=Math.pow(bai,3)+Math.pow(shi,3)+Math.pow(ge,3);
+        if(sum===i){
+            document.write(sum+"<br/>");
+        }
+    }
+</script>
+</html>

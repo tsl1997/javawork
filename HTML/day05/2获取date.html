@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let now=new Date();
+    with(now){
+      let fullYear = getFullYear();
+      let month = getMonth()+1;
+      let day = getDate();
+      let hours = getHours();
+      let minutes = getMinutes();
+      let seconds = getSeconds();
+      document.write(fullYear + "年" + month + "月" + day+ "日" + "<br/>");
+      document.write(hours + ":" + minutes + ":" + seconds + "");
+    }
+</script>
+</html>
