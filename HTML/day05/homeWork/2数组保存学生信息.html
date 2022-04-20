@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业2</title>
+</head>
+<body>
+
+</body>
+<!--实现功能：-->
+<!--1、定义数组，保存N个学生的成绩-->
+<!--2、打印成绩单，即输出数组中所有的数据-->
+<!--3、计算总分和平均分-->
+<!--4、找出最高分和最低分===》可以使用冒泡排序-->
+<script type="text/javascript">
+    // 设置学生成绩数组
+    let students = [56, 78, 59, 98, 88];
+    // 先排序
+    for (let i = 0; i < students.length; i++) {
+        for (let j = 0; j <= students.length - i - 1; j++) {
+            if (students[j] > students[j + 1]) {
+                let temp = students[j + 1];
+                students[j + 1] = students[j];
+                students[j] = temp;
+            }
+        }
+    }
+    //  定义求和变量sum
+    let sum = 0;
+    for (let i in students) {
+        sum += students[i];
+        document.write(students[i] + "&nbsp;");
+    }
+    //    打印结果
+    document.write("<br/>总分：" + sum);
+    document.write("<br/>平均分：" + sum / students.length);
+    document.write("<br/>最高分：" + students[students.length - 1]);
+    document.write("<br/>最低分：" + students[0]);
+</script>
+</html>

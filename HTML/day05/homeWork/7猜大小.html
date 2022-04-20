@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>猜大小</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*  1. 使用prompt提示用户输入一个1-10之间的数字
+      2. 使用Math的random()生成一个1-10的随机数
+      3. 用随机数和用户输入的数据进行比较，分别输出以下结果：
+    3-1 猜对了  两数相等
+      3-2 猜大了  用户输入的数字大于随机数
+      3-3 猜小了  用户输入的数字小于随机数*/
+    let input = prompt("请输入一个1-10之间的数字");
+    let num = parseInt(input);
+    if (!num || num > 10 || num < 1) {
+        alert("输入错误");
+    } else {
+        let random = Math.floor(Math.random() * 10 + 1);
+        if (random === num) {
+            alert("牛逼，你猜中了！");
+        } else {
+            alert("谢谢惠顾");
+        }
+    }
+
+</script>
+</html>

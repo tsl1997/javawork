@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多维数组</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*  使用多维数组保存三个班级，五个学生的成绩，并求各班的平均分和总分
+      Var arr=[[12,3,4,4,4,4],[4,4,5,45],[54,54,54,54,54]];*/
+    //定义数组
+    let arr = [[12, 3, 4, 4, 4, 4], [4, 4, 5, 45], [54, 54, 54, 54, 54]];
+    for (let i = 0; i < arr.length; i++) {
+        document.write("第" + (i + 1) + "个班级：");
+        let arr2 = arr[i];
+        let sum = 0;
+        for (let j of arr2) {
+            sum += j;
+        }
+        //打印成绩
+        document.write("&nbsp;总分：" + sum);
+        document.write("&nbsp;平均分：" + Math.floor(sum / arr2.length));
+        document.write("<br/>")
+    }
+
+</script>
+</html>

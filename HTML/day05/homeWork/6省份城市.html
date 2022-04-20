@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>城市</title>
+    <style type="text/css">
+        span {
+            color: #3636be;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let huBei = ["武汉", "襄阳", "黄冈", "荆州"];
+    let huNan = ["长沙", "株洲", "湘潭", "岳阳"];
+    let heNan = ["郑州", "开封", "洛阳", "鹤壁"];
+    let heBei = ["石家庄", "唐山", "邢台", "邯郸"];
+    let China = new Map([["湖北", huBei], ["湖南", huNan], ["河南", heNan], ["河北", heBei]]);
+    for (let i of China) {
+        document.write(i[0] + "<br/>");
+        let newCity = i[1];
+        for (let j in newCity) {
+            document.write("<span>" + newCity[j] + "&nbsp;</span>");
+        }
+        document.write("<br/>")
+    }
+</script>
+</html>

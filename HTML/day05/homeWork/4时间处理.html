@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间获取</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let date = new Date();//获取当前时间
+    with (date) {
+        let fullYear = getFullYear();
+        let month = getMonth()+1;//月份+1
+        let date1 = getDate();//日期
+        let day = getDay();//星期几
+        let hours = getHours();
+        let minutes = getMinutes();
+        let seconds = getSeconds();
+        let week=weeks(day);//调用方法
+        //输出内容
+        document.write(fullYear + "年" + month + "月" + date1 + "日");
+        document.write("<br/>" + hours + ":" + minutes + ":" + seconds );
+        document.write("<br/>星期" + week);
+    }
+
+    function weeks(day){
+        switch (day) {
+            case 1:
+                week = "一";
+                break;
+            case 2:
+                week = "二";
+                break;
+            case 3:
+                week = "三";
+                break;
+            case 4:
+                week = "四";
+                break;
+            case 5:
+                week = "五";
+                break;
+            case 6:
+                week = "六";
+                break;
+            case 0:
+                week = "日";
+                break;
+            default:
+                break;
+        }
+        return week;
+    }
+</script>
+</html>

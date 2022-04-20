@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双色球</title>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let redQiu = new Set();//用set去重
+    let blue = Math.floor(Math.random() * 16 + 1);//获取篮球
+    do {
+        redQiu.add(Math.floor(Math.random() * 16 + 1));
+    } while (redQiu.size < 6);
+    //打印结果
+    for (let i of redQiu) {
+        document.write("<span class='red'>" + i + "&nbsp;</span>");
+    }
+    document.write("<span class='blue'>" + blue + "</span>");
+
+</script>
+</html>
