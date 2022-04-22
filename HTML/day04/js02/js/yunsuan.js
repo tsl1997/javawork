@@ -8,21 +8,22 @@ function yuns(){
 		alert("请输入数字");
 		return;
 	}
+	let jieguo = document.getElementById("jieguo");
 	switch (fuhao){
 		case "+":
-			alert(num1+num2);
+			jieguo.value=num1+num2;
 			break;
 		case "-":
-			alert(num1-num2);
+			jieguo.value=num1-num2;
 			break;
 		case "*":
-			alert(num1*num2);
+			jieguo.value=num1*num2;
 			break;
 		case "/":
-			alert(num1/num2);
+			jieguo.value=num1/num2;
 			break;
 		default:
-			alert("Exception ");
+			alert("操作错误，请不要随意修改前端页面。");
 			break;
 	}
 }

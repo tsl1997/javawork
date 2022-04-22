@@ -16,15 +16,26 @@
     </style>
 </head>
 <body>
-用户名：<input type="text" id="username" />
-<p>密码：<input type="password" id="password" /></p>
-<p>确认密码：<input type="password" id="passRepeat" /></p>
-<p>Email：<input type="email" id="email" /></p>
-<p>手机号：<input type="tel" id="phone" /></p>
-<p>同意条款：<input type="checkbox" name="ok" checked>同意</p>
-<p><input type="button" name="signup" value="注册" id="signup"/></p>
+用户名：<input type="text" id="username" name="name"/>
+<p>密码：<input type="password" id="password" name="password"/></p>
+<p>确认密码：<input type="password" id="passRepeat" name="passRepeat"/></p>
+<p>Email：<input type="text" id="email" name="email"/></p>
+<p>手机号：<input type="tel" id="phone" name="phone"/></p>
+<p>同意条款：<input type="checkbox"  checked name="isOk">同意</p>
+<p><input type="button" name="signup" value="注册" id="signup" onclick="signup()"/></p>
 </body>
 <script type="text/javascript">
-
+function signup() {
+    // let name = document.getElementById("username");
+    // let password = document.getElementById("password");
+    // let passRepeat = document.getElementById("passRepeat");
+    // let email = document.getElementById("email");
+    let phone = document.getElementById("phone");
+    let isOk = document.getElementById("isOk");
+  //  alert(name.value + " " + password.value + " " + passRepeat.value);
+  //   alert(email.value);
+  //   alert(phone.value);
+  //   alert(isOk.checked);
+}
 </script>
 </html>
