@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  window.onload=function(){
+    //注册事件监听器
+    //1 获取事件源 全选按钮
+    let objCheckbox=document.getElementById("chkAll");
+    //2 注册事件监听器
+    //2-1 获取所有的科目
+    let arrCheckBox=document.getElementsByName("subject");
+    objCheckbox.onclick=function(){
+      //1.获取全选按钮的checked属性值
+      //2.获取所有的科目，将所有的科目的checked设置成第一步获取的属性值
+      let strChecked=objCheckbox.checked;//objCheckbox是html上一个标签，每个标签有哪些可以点击出来的属性
+      //2-2 设置与全选的checked属性值一样的
+      for(let i=0;i<arrCheckBox.length;i++){
+        arrCheckBox[i].checked=strChecked;
+      }
+    }
+    //3：获取方法并执行
+    let noChk = document.getElementById("noChk");
+    noChk.onclick=function(){
+      //2-2 设置与全选的checked属性值一样的
+      for(let i=0;i<arrCheckBox.length;i++){
+        arrCheckBox[i].checked=!arrCheckBox[i].checked;
+      }
+    }
+  }
+
+</script>
+<body>
+<input type="checkbox" id="chkAll"/>全选
+<input type="button" value="反选" id="noChk"/>
+<br />
+<!--
+    选中：checked=true 选中  checked=false 不选
+-->
+<input type="checkbox" name="subject" />java
+<input type="checkbox" name="subject"/>html
+<input type="checkbox" name="subject"/>sql
+<input type="checkbox" name="subject"/>vue
+<input type="checkbox" name="subject"/>spring
+<input type="checkbox" name="subject"/>springboot
+<input type="checkbox" name="subject"/>springmvc
+</body>
+</html>

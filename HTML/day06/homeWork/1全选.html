@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业1</title>
+</head>
+<body>
+<input type="checkbox" id="chkAll"/>全选
+<input type="button" value="反选" id="noChk"/>
+<br />
+<!--
+    选中：checked=true 选中  checked=false 不选
+-->
+<input type="checkbox" name="subject" />java
+<input type="checkbox" name="subject"/>html
+<input type="checkbox" name="subject"/>sql
+<input type="checkbox" name="subject"/>vue
+<input type="checkbox" name="subject"/>spring
+<input type="checkbox" name="subject"/>springboot
+<input type="checkbox" name="subject"/>springmvc
+</body>
+<script type="text/javascript">
+  window.onload=function(){
+    let objCheckbox=document.getElementById("chkAll");
+    let arrCheckBox=document.getElementsByName("subject");
+    //全选功能
+    objCheckbox.onclick=function(){
+      let strChecked=objCheckbox.checked;
+      for(let i=0;i<arrCheckBox.length;i++){
+        arrCheckBox[i].checked=strChecked;
+      }
+    }
+    //反选功能
+    let noChk = document.getElementById("noChk");
+    noChk.onclick=function(){
+      for(let i=0;i<arrCheckBox.length;i++){
+        arrCheckBox[i].checked=!arrCheckBox[i].checked;
+      }
+    }
+  }
+</script>
+</html>

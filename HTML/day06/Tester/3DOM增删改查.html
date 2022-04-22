@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<script type="text/javascript">
+    window.onload=function(){
+        //1.文本注册focus事件，设置文本框的背景色
+        var objText=document.getElementById("txt");
+        //注册事件监听器
+        objText.onfocus=function(){
+            //监听器注册的匿名函数中，通常事件源可以使用this指代
+            //给文本框设置背景色style="background-color: gray;size:24px"
+            this.style.backgroundColor="#84e26c";
+//				alert(this);
+        }
+        //获取所有的案例
+        var arrButtons=document.getElementsByClassName("btn");
+        //尾部追加
+        arrButtons[0].onclick=function(){
+            /**
+             * 1.新增：尾部
+             * 1-1 创建一个新的标签li createElement() createText()
+             * 1-2 将新创建的li对象放置到ul的尾部
+             */
+            var objNewLi=document.createElement("li");
+
+            //设置li内部的文本
+            var objText=document.getElementById("txt");
+            var strGirl=objText.value;
+
+            var objNewText=document.createTextNode(strGirl);
+
+            objNewLi.appendChild(objNewText);
+            //放到html的ul尾部
+            //父节点.添加子节点()
+            //获取父节点
+            var objParentUl=document.getElementById("girlList");
+            //追加
+            objParentUl.appendChild(objNewLi);
+        }
+
+        //前置插入
+        arrButtons[1].onclick=function(){
+            /**
+             * 1.新增：在指定的节点前面插入
+             * 1-1 创建一个新的标签li createElement() createText()
+             * 1-2 ul.前置插入(new，old);
+             */
+            var objNewLi=document.createElement("li");
+
+            //设置li内部的文本
+            var objText=document.getElementById("txt");
+            var strGirl=objText.value;
+
+            var objNewText=document.createTextNode(strGirl);
+
+            objNewLi.appendChild(objNewText);
+            //放到html的ul尾部
+            //父节点.添加子节点()
+            //获取父节点
+            var objParentUl=document.getElementById("girlList");
+            //追加
+            //1-1 ul的子节点 childNodes获取指定元素的所有的子节点，但是会包含空格，所以使用不方便
+            //推荐新方法：父节点.getElementsByTagName()
+            var arrChildren=objParentUl.getElementsByTagName("li");//objParentUl.childNodes;
+//				alert(arrChildren.length);
+
+            objParentUl.insertBefore(objNewLi,arrChildren[1]);
+        }
+
+
+        //替换
+        arrButtons[2].onclick=function(){
+            /**
+             * 替换：用新的节点替换旧的节点
+             * 父节点.replaceChild();
+             */
+        }
+
+        //删除
+        arrButtons[3].onclick=function(){
+            /**
+             * 删除：用新的节点替换旧的节点
+             * 父节点.removeChild();
+             */
+        }
+
+        //克隆
+        arrButtons[4].onclick=function(){
+            alert(this.value);
+        }
+
+
+    }
+</script>
+<body>
+<ul id="girlList">
+    <li>闭月</li>
+    <li>羞花</li>
+    <li>沉鱼</li>
+    <li>落雁</li>
+</ul>
+<input type="text" name="txt" id="txt" value="" />
+<input type="button" class="btn" name="" id="btnReAdd" value="尾部追加" />
+<input type="button" class="btn" name="" id="btnAdd" value="前置插入" />
+<input type="button" class="btn" name="" id="btnReplace" value="替换" />
+<input type="button" class="btn" name="btnDel" id="btnDel" value="删除" />
+<input type="button" class="btn" name="" id="btnClone" value="克隆" />
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1获取标签内容</title>
+</head>
+<body>
+用户名：<input type="text" name="username" id="username"/>
+<p><input type="button" value="点我试试" onclick="xiu()"/> </p>
+
+</body>
+<script type="text/javascript">
+    function xiu(){
+        let name = document.getElementById("username");//获取标签
+        name.value = "天上掉下个林妹妹";//修改标签内容
+       // alert("当前输入的用户名："+name.value);
+    }
+
+</script>
+</html>

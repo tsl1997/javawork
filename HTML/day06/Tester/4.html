@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  //定义数组保存所有的省
+  var province=["湖北省","河南省","湖南省","河北省"];
+  //使用省份名称为key，存入该省对应的市
+  province["湖北省"]=["武汉市","黄冈市","襄阳市","荆州市"];
+  province["河南省"]=["郑州市","信阳市","洛阳市","驻马店"];
+  province["湖南省"]=["长沙市","郴州市","岳阳市","衡阳市"];
+  province["河北省"]=["石家庄市","邯郸市","秦皇岛市"];
+  //一个格式，实现市和区的对应
+  province["武汉市"]=["洪山区","武昌区","汉口区"];
+  province["襄阳市"]=["襄州区","宜城市","谷城市"];
+  province["长沙市"]=["羊区","人区"];
+
+  //网页加载完毕，就加载所有的省份到select
+  window.onload=function(){
+    //将数组中所有的省份追加到select中
+    /**
+     * 1.创建option createElement()
+     * 2.创建text createTextNode(数据从何而来？？？)
+     * 3.父.appendChild(子);
+     */
+  let length = province.length;//定义长度
+    let sheng = document.getElementById("sheng");
+    for(let i=0;i<length;i++){
+
+    }
+
+
+  }
+
+</script>
+<body>
+省份：
+<select id="sheng">
+  <option>====请选择所在的省份====</option>
+</select><br />
+市：<select></select><br />
+</body>
+</html>
