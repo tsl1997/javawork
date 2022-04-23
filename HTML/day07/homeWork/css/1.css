@@ -1,0 +1,10 @@
+td:nth-of-type(1) {
+    background-color: #b3e9e9;
+    text-align: right;
+    font-size: 25px;
+}
+#sub1{
+    width:120px;
+    height:50px;
+    font-size:25px;
+}
