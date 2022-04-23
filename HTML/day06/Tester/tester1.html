@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  window.onload=function(){
+    //给form添加onsubmit的监听器，验证手机号码是否正确
+    document.getElementById("txtPhone").onblur=function(){
+      //获取用户输入的手机号
+      let Text = document.getElementById("txtPhone");
+      let phone=Text.value;
+      let iSpan = document.getElementById("iSpan");
+      //正则
+      var reg=/^1[35789]\d{9}$/;
+      if(!reg.test(phone)){
+        // alert("手机号输入有误");
+        Text.value="";//强制清空
+        iSpan.innerText="手机号输入有误！";
+        return false;
+      }
+      iSpan.innerText="";//重置为空
+      return true;
+    }
+
+    document.getElementById("form1").onsubmit=function (){
+      return  document.getElementById("txtPhone").onblur();
+    }
+  }
+</script>
+<body>
+<!--
+    阻止submit按钮默认行为：
+    return false:表单提交时，如果看到提交监听器注册function的返回值是false
+    onsubmit="return 验证结果;"
+-->
+<form id="form1" action="http://www.baidu.com" method="post" >
+  <p>
+    手机号码：<input id="txtPhone" type="text" name="phone" />
+    <span style="color:red" id="iSpan"></span>
+  </p>
+  <p>
+    用户名：<input id="txtUserName" type="text"/>
+  </p>
+  <p>
+    <!--
+        submit单击之后不是click事件。触发form的submit事件
+    -->
+    <input type="submit"  value="注册" />
+  </p>
+</form>
+</body>
+</html>
