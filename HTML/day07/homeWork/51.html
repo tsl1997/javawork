@@ -6,11 +6,15 @@
 </head>
 <body>
 <div id="div1"></div>
+<button onclick="hou()">后退</button>
 </body>
 <script type="text/javascript">
     window.onload = function () {
         let opener = window.opener;
         document.getElementById("div1").innerText = "大侠的名字是：" + opener.s;
+    }
+    function hou(){
+        history.back();
     }
 </script>
 </html>
