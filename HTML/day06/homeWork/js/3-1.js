@@ -11,7 +11,7 @@ ids("go").onclick=function(){
     for(let i=0; i<num1; i++){
         str+="<tr>";
         for(let j=0; j<num2; j++){
-            str+="<td>文本</td>"
+            str+="<td name='e'></td>"
         }
         str+="</tr>";
     }

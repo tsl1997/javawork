@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试表格</title>
+</head>
+<body>
+<table  cellspacing="0" cellpadding="10px" border="1">
+  <tr>
+    <td name="e"></td>
+    <td name="e"></td>
+  </tr>
+  <tr>
+    <td name="e"></td>
+    <td name="e"></td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+  let es = document.getElementsByName("e");
+  for(let s=0;s<es.length;s++){
+    es[s].onclick=function () {
+      alert("点中了")
+    }
+  }
+</script>
+</html>
