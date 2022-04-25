@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+<button onclick="show()">开始</button>
+<button onclick="end()">结束</button>
+</body>
+<script type="text/javascript">
+    <!--  显示内容-->
+    let id;
+    function show() {
+        document.getElementById("div1").innerText = new Date().toLocaleString();
+        id = setTimeout(show, 1000);//递归调用
+    }
+
+    function end() {
+        clearTimeout(id);//停止定时器
+    }
+</script>
+</html>

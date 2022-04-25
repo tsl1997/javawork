@@ -5,10 +5,13 @@
     <title>大侠留步</title>
 </head>
 <body>
-
+<button onclick="ClickMe()">戳一下</button>
 </body>
 <script type="text/javascript">
-  let s = prompt("大侠，请\t留下您的大名！");
-  open();
+    var s;
+    function  ClickMe() {
+        s = prompt("大侠，请\t留下您的大名！");
+        open("51.html");
+    }
 </script>
 </html>

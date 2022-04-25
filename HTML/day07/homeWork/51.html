@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        let opener = window.opener;
+        document.getElementById("div1").innerText = "大侠的名字是：" + opener.s;
+    }
+</script>
+</html>
