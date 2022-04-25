@@ -9,10 +9,19 @@ $("#cilAll").click(//设置全选监听器
         boxClick(true);//全部内容为true
     }
 );
-$("#cilAll").click();//调用方法
 $("#cilNpAll").click(//设置全不选监听器
-    function(){
-        boxClick(false);//全部内容为false
+     function(){
+        boxClick(false)//全部内容为false
     }
 );
-$("#cilNpAll").click();//调用方法
+$("#NoCil").click(
+    function(){
+        NO();
+    }
+);
+function NO(){//设置取反函数
+    cBox.each(function(num,dom){
+            let ck = $(dom).prop("checked");
+            dom.checked=!ck;//取反操作
+        })
+}
