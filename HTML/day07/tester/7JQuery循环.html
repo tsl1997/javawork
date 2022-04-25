@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<input type="checkbox" id="chkAll"/>全选
+<input type="button" id="btnCheck" value="反选"/>
+<br/>
+<input type="checkbox" class="subject"/>java
+<input type="checkbox" class="subject"/>html
+<input type="checkbox" class="subject"/>sql
+<input type="checkbox" class="subject"/>vue
+<input type="checkbox" class="subject"/>spring
+<input type="checkbox" class="subject"/>springboot
+<input type="checkbox" class="subject"/>springmvc
+</body>
+
+<script type="text/javascript">
+    //给全选添加一个click的监听器
+    //jquery如何处理事件监听器 所有的on事件=function() 改成  选择器.事件(function(){})
+    $("#chkAll").click(function () {
+        let arrJQ = $(".subject");
+        arrJQ.each(function (index, objDom) {
+            let vl = $("#chkAll").prop("checked");
+            $(objDom).prop("checked", vl);
+        })
+    });
+    $("#btnCheck").click(function () {
+        let arrJQ = $(".subject");
+        arrJQ.each(function (index, objDom) {
+            let vl=$(objDom).prop("checked");
+            $(objDom).prop("checked", !vl);
+        })
+    });
+
+</script>
+</html>

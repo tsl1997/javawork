@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="div1">111</div>
+<div class="div1">222</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+  let div1 = $(".div1");
+  div1[0].onclick=function(){
+    this.innerText="已经改变拉";
+    div1.get(1).text("这是第二行")
+  }
+  div1.get(1).onclick=function(){
+    this.innerText="333";
+  }
+</script>
+</html>
