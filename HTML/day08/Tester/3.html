@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<script type="text/javascript">
+  $(function() {
+    //1.按钮注册click事件监听器
+    $("#sear").click(function(){
+      //1.获取用户的搜索条件
+      var strSearch=$("#find").val();
+      //2.table里面包含搜索条件的td显示
+      //标签：显示show()  隐藏：hide()
+      //2-1 隐藏所有的数据
+      $("table tr:gt(0)").hide();
+      //2-2 将匹配的行显示
+      $("table tr:contains('"+strSearch+"')").show();
+    });
+
+    //文本框的键盘弹起事件
+    $("#find").keyup(function(){
+      //1.获取用户的搜索条件
+      var strSearch=$(this).val();//("#find").val();
+      //2.table里面包含搜索条件的td显示
+      //标签：显示show()  隐藏：hide()
+      //2-1 隐藏所有的数据
+      $("table tr:gt(0)").hide();
+      //2-2 将匹配的行显示
+      if(!strSearch){
+        //显示所有
+        $("table tr:gt(0)").show();
+      }else{
+        $("table tr:contains('"+strSearch+"')").show();
+      }
+    });
+  });
+</script>
+
+<body>
+<input type="text" id="find" />
+<input type="button" value="search" id="sear"/>
+<table border="1" cellspacing="0" cellpadding="4">
+  <thead>
+  <tr>
+    <th>编号</th>
+    <th>姓名</th>
+    <th>年龄</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>张三</td>
+    <td>24</td>
+  </tr>
+  <tr>
+    <td><p id="mini">2</p></td>
+    <td>jack</td>
+    <td>29</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>lily熊</td>
+    <td>14</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>lily熊</td>
+    <td>14</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+
+</html>

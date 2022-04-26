@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<input type="text" id="find"/><input type="button" value="search" id="sear"/>
+<table border="1" cellspacing="0" cellpadding="4">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>张三</td>
+        <td>24</td>
+    </tr>
+    <tr>
+        <td><p id="mini">2</p></td>
+        <td>jack</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>lily熊</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>lily熊</td>
+        <td>14</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $("tbody tr:even").css("backgroundColor", "pink");
+        $("tbody tr:odd").css("backgroundColor", "#cceaa6");
+    })
+</script>
+</html>
