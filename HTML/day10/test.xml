@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phones>
+    <phone brand="华为">
+    <type>U8650</type>
+    <type>U8650</type>
+    <type>U8650</type>
+</phone>
+<phone brand="苹果">
+<type>iphone4</type>
+</phone>
+<phone brand="三星">
+<type>Note4</type>
+ </phone>
+</phones>
