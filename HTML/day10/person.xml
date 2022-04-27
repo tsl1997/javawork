@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--数据存储和传输-->
+<!--people理解成是xml的根节点，根节点有且只有一个，类似html的<html>
+ xml标签都是自定义的，遵循命名规则即可：
+-->
+<people>
+    <!--
+        xml优势：阅读性好。简单易操作
+        缺点：标签名自定义，团队开发不便于管理
+        XML约束！！！
+        相比较数据存储的文件格式：
+        U1学习IO，.txt  .doc .class
+    -->
+    <person id="p001">
+        <name>张无忌</name>
+        <age>24</age>
+        <sex>男</sex>
+        <!--        。。。。-->
+    </person>
+    <person id="p002">
+        <name>周芷若</name>
+        <age>22</age>
+        <sex>女</sex>
+        <!--        。。。。-->
+    </person>
+    <person id="p003">
+        <name>金毛狮王</name>
+        <age>42</age>
+        <sex>男</sex>
+        <!--        。。。。-->
+    </person>
+    <person id="p004">
+        <name>杨逍</name>
+        <age>36</age>
+        <sex>男</sex>
+        <!--        。。。。-->
+    </person>
+</people>

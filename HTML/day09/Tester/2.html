@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高粱显示</title>
+    <style type="text/css">
+        .even{
+            background-color: #fff4f4;
+        }
+        .odd{
+            background-color: #b3e9e9;
+        }
+        .hight{
+            background-color: #f5f480;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>空我</li>
+    <li>响鬼</li>
+    <li>帝骑</li>
+    <li>时王</li>
+    <li>零一</li>
+    <li>圣刃</li>
+</ul>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+
+ $("ul li").mouseover(function(){
+     $(this).addClass("hight");
+ }).mouseleave(function () {
+     $(this).removeClass("hight");
+ })
+ $("ul li:even").addClass("even");
+ $("ul li:odd").addClass("odd");
+</script>
+</html>
