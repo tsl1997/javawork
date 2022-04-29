@@ -33,6 +33,7 @@ public class tester {
 		SAXReader saxReader = new SAXReader();
 		Document read = saxReader.read("person.xml");
 		List<Node> list = read.selectNodes("//person");//获取所以的带有id属性的标签集合
+		list.remove(0);
 		System.out.println(list);
 		for(Node element : list){//比那里标签集合
 			if(element instanceof Element) {

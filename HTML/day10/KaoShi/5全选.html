@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    <input type="checkbox" id="All">全选/全不选(请用按钮操作)<br/>
+    <input type="checkbox">足球
+    <input type="checkbox">篮球
+    <input type="checkbox">游泳
+    <input type="checkbox">跳舞
+    <br/>
+    <button id="cilAll">全选</button>
+    <button id="cilNpAll">全不选</button>
+    <button id="NoCil">取反</button>
+    <br/>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    let cBox = $(":checkbox");//获取选择器
+    function boxClick(bool) {//点击事件
+        cBox.each(function (num, dom) {
+            $(dom).prop("checked", bool);
+        })
+    }
+
+    $("#cilAll").click(//设置全选监听器
+        function () {
+            boxClick(true);//全部内容为true
+        }
+    );
+    $("#cilNpAll").click(//设置全不选监听器
+        function () {
+            boxClick(false)//全部内容为false
+        }
+    );
+    $("#NoCil").click(
+        function () {
+            NO();
+        }
+    );
+
+    function NO() {//设置取反函数
+        cBox.each(function (num, dom) {
+            let ck = $(dom).prop("checked");
+            dom.checked = !ck;//取反操作
+        })
+    }
+</script>
+</html>

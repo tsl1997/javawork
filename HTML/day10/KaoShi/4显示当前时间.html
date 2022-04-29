@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示时间</title>
+</head>
+<body>
+当前时间：
+<div id="div1"></div>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    function time() {
+        let date = new Date();//获取date对象
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;//月份加一
+        let date1 = date.getDate();
+
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        hours = hours > 12 ? "下午" + (hours - 12) : "上午" + hours;//判断上午还是下午
+        let str = year + "/" + month + "/" + date1 + "   " + hours + ":" + minutes + ":" + seconds;
+        $("#div1").html(str);
+        $("#div1").css("font-size", "25px");//设置CSS样式
+    }
+
+    function showTime() {
+        setInterval(time, 1000);//定时器
+    }
+
+    showTime();//调用方法
+</script>
+</html>

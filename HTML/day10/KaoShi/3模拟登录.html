@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟登录</title>
+</head>
+<body>
+<table border="1" cellspacing="0" cellpadding="10px">
+    <caption>登录页面</caption>
+    <form action="#" method="post">
+        <tr>
+            <td>用户名：</td>
+            <td>
+                <input type="text" name="username" id="username"/>
+            </td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td>
+                <input type="text" name="password" id="password"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" id="login" value="登录"/>
+            </td>
+            <td>
+                <input type="reset" value="清空"/>
+            </td>
+        </tr>
+    </form>
+</table>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    $("#login").click(
+        function () {
+            let username = $("#username").val();
+            let password = $("#password").val();
+            if (!username || !password) {
+                alert("请输入账号或者密码");
+                return;
+            }
+            if ("admin" !== username || "123456" !== password) {
+                alert("账号或者密码输入错误，登录失败");
+                return;
+            }
+            alert("登录成功！");
+        }
+    );
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加</title>
+</head>
+<body>
+<p align="center">添加用户</p>
+<p align="center">
+    姓名：<input type="text" id="name"/>
+    email：<input type="text" id="email"/>
+    电话：<input type="text" id="tel"/>
+</p>
+<p align="center">
+    <input type="button" value="提交" onclick="add();"/>
+</p>
+<hr/>
+<table id="tab" align="center" border="1" cellspacing="0" cellpadding="10px">
+    <tr>
+        <td>姓名</td>
+        <td>email</td>
+        <td>tel</td>
+        <td>操作</td>
+    </tr>
+</table>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    function add() {
+        let name = $("#name").val();//获取姓名
+        let email = $("#email").val();//获取email
+        let tel = $("#tel").val();//获取电话
+        if (!name || !email || !tel) {
+            alert("请输入完整的数据后再操作");//验证数据
+            return;
+        }
+        let str = "<tr>" + "<td>" + name + "</td>" + "<td>" + email + "</td>" + "<td>" + tel + "</td>" + "<td><a href='#'>delete</a></td>" + "</tr>";
+        $("#tab").append(str);//添加节点
+    }
+
+    $("table").delegate("a", "click", function () {
+        if (confirm("确认删除数据吗？")) {
+            $(this).parent().parent().remove();//删除a所在的行tr标签
+        }
+    });
+</script>
+</html>

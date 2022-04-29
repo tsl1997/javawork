@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算器</title>
+</head>
+<body>
+<input type="text" id="num1"/>
+<select id="yun">
+    <option value="1" checked/>
+    +
+    <option value="2"/>
+    -
+    <option value="3"/>
+    *
+    <option value="4"/>
+    /
+</select>
+<input type="text" id="num2"/>
+<input type="button" id="go" value="结果是" onclick="goClick();"/>
+<input type="text" id="num3"/>
+</body>
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    function goClick() {
+        let num1 = parseInt($("#num1").val());//获取数字1
+        let num2 = parseInt($("#num2").val());//获取数字2
+        let che = parseInt($("select option:selected").val());
+        let num3 = $("#num3");
+        if (!num1 || !num2) {
+            alert("请输入数字");//合法性验证
+            return;
+        }
+        if (che === 1) {
+            num3.val(num1 + num2);//加
+        }
+        if (che === 2) {
+            num3.val(num1 - num2);//减
+        }
+        if (che === 3) {
+            num3.val(num1 * num2);//乘法
+        }
+        if (che === 4) {
+            num3.val(num1 / num2);//除法
+        }
+    }
+</script>
+</html>
