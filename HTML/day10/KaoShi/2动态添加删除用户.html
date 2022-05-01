@@ -26,6 +26,7 @@
 </body>
 <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
+    let es;//设置未来的变量
     function add() {
         let name = $("#name").val();//获取姓名
         let email = $("#email").val();//获取email
@@ -36,12 +37,28 @@
         }
         let str = "<tr>" + "<td>" + name + "</td>" + "<td>" + email + "</td>" + "<td>" + tel + "</td>" + "<td><a href='#'>delete</a></td>" + "</tr>";
         $("#tab").append(str);//添加节点
+        es = $("a");//获取a标签集合
+        esClicks();//调用函数
+    }
+    //js原生写法
+    function esClicks() {
+        for (let i = 0; i < es.length; i++) {
+            es[i].onclick = function () {
+                if (confirm("确认删除数据吗？")) {
+                    let son = es[i].parentNode.parentNode;
+                    let father = son.parentNode;
+                    father.removeChild(son);//删除操作
+                    i--;//控制下标
+                }
+            }
+        }
     }
 
-    $("table").delegate("a", "click", function () {
-        if (confirm("确认删除数据吗？")) {
-            $(this).parent().parent().remove();//删除a所在的行tr标签
-        }
-    });
+    //jQuery方法
+    // $("table").delegate("a", "click", function () {
+    //     if (confirm("确认删除数据吗？")) {
+    //         $(this).parent().parent().remove();//删除a所在的行tr标签
+    //     }
+    // });
 </script>
 </html>
